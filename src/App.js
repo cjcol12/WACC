@@ -14,6 +14,7 @@ import { AcmeLogo } from "./AcmeLogo.js";
 import { VariantsSelectorWrapper } from "./VariantsSelectorWrapper.js";
 import { Card1 } from "./components/Card1.js";
 import { Grid } from "@nextui-org/react";
+import "./style/App.css";
 
 export default function App() {
     const [variant, setVariant] = React.useState("default");
@@ -39,7 +40,7 @@ export default function App() {
                 <Navbar.Brand>
                     <AcmeLogo />
                     <Text b color="inherit" hideIn="xs">
-                        ACME
+                        WACC
                     </Text>
                 </Navbar.Brand>
                 <Navbar.Content
@@ -47,12 +48,14 @@ export default function App() {
                     hideIn="xs"
                     variant={variant}
                 >
-                    <Navbar.Link href="#">Features</Navbar.Link>
+                    <Navbar.Link href="#">Home</Navbar.Link>
                     <Navbar.Link isActive href="#">
-                        Customers
+                        Learn More
                     </Navbar.Link>
-                    <Navbar.Link href="#">Pricing</Navbar.Link>
-                    <Navbar.Link href="#">Company</Navbar.Link>
+                    <Navbar.Link href="#">
+                        What are the Alternatives
+                    </Navbar.Link>
+                    <Navbar.Link href="#">Contact us</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Content>
                     <Navbar.Link color="inherit" href="#">
@@ -71,7 +74,7 @@ export default function App() {
                     </Navbar.Item>
                 </Navbar.Content>
             </Navbar>
-            <VariantsSelectorWrapper>
+            {/* <VariantsSelectorWrapper>
                 <Card css={{ px: "$6", maxW: "90%" }}>
                     <Card.Body>
                         <Radio.Group
@@ -115,13 +118,7 @@ export default function App() {
                         </Radio.Group>
                     </Card.Body>
                 </Card>
-            </VariantsSelectorWrapper>
-            <Grid.Container gap={2} justify="center">
-                <Grid xs={12} sm={4}>
-                    <Card1 />
-                </Grid>
-                <h1>example text on page</h1>
-            </Grid.Container>
+            </VariantsSelectorWrapper> */}
         </Layout>
     );
 }
