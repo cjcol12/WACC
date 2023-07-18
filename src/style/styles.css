@@ -12,3 +12,28 @@ body {
 h1 {
     font-size: 1.5rem;
 }
+
+.card_caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+    .card_caption {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card_caption {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+}
