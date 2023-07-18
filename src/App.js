@@ -9,9 +9,11 @@ import {
     Radio,
     useTheme,
 } from "@nextui-org/react";
-import { Layout } from "./Layout.js";
+import { Layout } from "./components/Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { VariantsSelectorWrapper } from "./VariantsSelectorWrapper.js";
+import { Card1 } from "./components/Card1.js";
+import { Grid } from "@nextui-org/react";
 
 export default function App() {
     const [variant, setVariant] = React.useState("default");
@@ -114,6 +116,12 @@ export default function App() {
                     </Card.Body>
                 </Card>
             </VariantsSelectorWrapper>
+            <Grid.Container gap={2} justify="center">
+                <Grid xs={12} sm={4}>
+                    <Card1 />
+                </Grid>
+                <h1>example text on page</h1>
+            </Grid.Container>
         </Layout>
     );
 }
