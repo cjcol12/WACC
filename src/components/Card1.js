@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Text } from "@nextui-org/react";
 import styled from "styled-components";
+import cardImage from "../images/1_tonne.png";
+import "../style/styles.css";
 
 const HeaderWrapper = styled.div`
     position: absolute;
@@ -18,16 +20,16 @@ const HeaderWrapper = styled.div`
 export const Card1 = () => (
     <Card>
         <HeaderWrapper>
-            <Text h2 color="white">
-                Net Zero is Impossible
+            <Text h2 color="white" className="card_caption">
+                Net Zero is Impossible.
             </Text>
         </HeaderWrapper>
         <Card.Image
-            src="https://nextui.org/images/card-example-4.jpeg"
+            src={cardImage}
             objectFit="cover"
             width="100%"
-            height={340}
-            alt="Card image background"
+            height="100%"
+            alt="1 Tonne CO2 ballon compared to bus"
         />
     </Card>
 );
