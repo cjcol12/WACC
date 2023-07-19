@@ -1,0 +1,33 @@
+#alternatives {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#alternatives-text {
+    font-size: 5rem;
+    font-weight: 500;
+    color: red;
+    z-index: 2;
+}
+
+.nz-paras {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+@media (min-width: 1200px) {
+    .nz-paras {
+        font-weight: 600;
+        font-size: 2rem;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .nz-paras {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}

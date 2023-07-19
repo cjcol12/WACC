@@ -1,0 +1,32 @@
+.body {
+    background-image: linear-gradient(
+        to bottom,
+        #437b92,
+        #3c8294,
+        #398993,
+        #3b9091,
+        #43968c
+    );
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .column {
+        padding: 20px;
+    }
+
+    .right-col {
+        display: flex;
+        justify-content: right;
+        font-size: 2rem;
+        color: red;
+        font-weight: 500;
+        position: relative;
+        left: 3vw;
+    }
+}
