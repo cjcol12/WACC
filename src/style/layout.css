@@ -1,6 +1,6 @@
 body,
 html {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
 }
 
@@ -8,12 +8,9 @@ section {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     scroll-snap-align: start;
 }
 
-.pages {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+TitleCard {
+    margin-top: 100px;
 }

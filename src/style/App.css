@@ -1,58 +1,71 @@
 .App {
     text-align: center;
+    position: relative; /* Added to establish a new positioning context for the arrow */
+    overflow-y: visible;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.scroll-down {
+    position: fixed;
+    left: 50%;
+    bottom: 5vh;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-bottom: 0.35vh solid red;
+    border-right: 0.35vh solid red;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation: fade_move_down 4s ease-in-out infinite;
+    animation: fade_move_down 4s ease-in-out infinite;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+@-webkit-keyframes fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+@-moz-keyframes fade_move_down {
+    0% {
+        -moz-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
     }
-    to {
-        transform: rotate(360deg);
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }
 
-.nz-paras {
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-top: 5%;
-}
-@media (min-width: 1200px) {
-    .nz-paras {
-        font-weight: 600;
-        font-size: 2rem;
-        margin-top: 10%;
+@keyframes fade_move_down {
+    0% {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
     }
-}
 
-@media (max-width: 500px) {
-    .nz-paras {
-        font-weight: 600;
-        font-size: 1rem;
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }

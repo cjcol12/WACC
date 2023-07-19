@@ -6,15 +6,15 @@ import "../style/styles.css";
 
 const HeaderWrapper = styled.div`
     position: absolute;
-    top: 80%;
-    left: 75%;
-    transform: translate(-50%, -50%);
+    // top: 80%;
+    // left: 60%;
+    // transform: translate(-50%, -50%);
     z-index: 1;
 
-    @media only screen and (max-width: 600px) {
-        top: 70%;
-        left: 70%;
-    }
+    // @media only screen and (max-width: 600px) {
+    //     top: 70%;
+    //     left: 70%;
+    // }
 `;
 
 export const Card1 = () => (
