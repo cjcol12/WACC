@@ -10,7 +10,7 @@
     bottom: 5vh;
     display: block;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
     width: 1.3rem;
     height: 1.3rem;
     border-bottom: 0.35vh solid red;

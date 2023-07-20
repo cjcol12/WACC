@@ -9,7 +9,7 @@
     );
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -29,4 +29,30 @@
         position: relative;
         left: 3vw;
     }
+}
+
+#title {
+    color: red;
+}
+
+#bg-black {
+    background-color: black;
+    transition: background-color 3s ease-in; /* Add this line */
+}
+
+.word {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.animate-word {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    opacity: 1;
+    transition: all 2s ease;
 }

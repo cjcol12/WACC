@@ -5,23 +5,31 @@ import "../style/layout.css";
 import BlankPage from "./BlankRed.js";
 
 export const Layout = ({ children }) => {
-    const color1 = "blue"; // Define the desired color
+    const color1 = "blue";
     const color2 = "green";
+    const color3 = "black"; // Define another color for the last page overlay
     return (
         <Box>
             {children}
-            {/* <TimeCard /> */}
-            <section>
+            <section className="section">
                 <TitleCard />
             </section>
-            <section style={{ backgroundColor: color1 }}>
-                <BlankPage />
+            <section className="section" style={{ backgroundColor: color1 }}>
+                <div
+                    className="color-overlay"
+                    style={{ backgroundColor: color1 }}
+                ></div>
+                <BlankPage className="content" />
             </section>
-            <section style={{ backgroundColor: color2 }}>
-                <BlankPage />
+            <section className="section" style={{ backgroundColor: color2 }}>
+                <div
+                    className="color-overlay"
+                    style={{ backgroundColor: color2 }}
+                ></div>
+                <BlankPage className="content" />
             </section>
-            <section>
-                <Content />
+            <section className="section">
+                <Content className="content" />
             </section>
         </Box>
     );
