@@ -16,19 +16,11 @@ export const Content = () => {
         "Net Zero in the UK is \n IMPOSSIBLE",
     ];
 
-    const gridStyle =
-        window.innerWidth >= 800
-            ? {
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gridTemplateRows: "1fr 1fr 1fr",
-              }
-            : {};
-
     useEffect(() => {
         const colorfulSection = document.getElementById("bg-black");
         const title = document.getElementById("title");
         const wordElements = document.querySelectorAll(".word");
+        const textElements = document.querySelectorAll(".text-content"); // Select all the text content
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -43,7 +35,14 @@ export const Content = () => {
                     wordElements.forEach((word, index) => {
                         setTimeout(() => {
                             word.classList.add("animate-word");
-                        }, index * 500); // 500ms delay between each word
+                        }, index * 1000); // 1000ms delay between each word
+                    });
+
+                    textElements.forEach((text, index) => {
+                        // For each text content
+                        setTimeout(() => {
+                            text.classList.add("animate-text"); // Add class for animation
+                        }, index * 1500); // Delay 2 seconds between each text content
                     });
                 }
             },
@@ -67,7 +66,13 @@ export const Content = () => {
                 <Text h2 id="title">
                     Net Zero Is Impossible
                 </Text>
-                <div style={gridStyle}>
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr 1fr",
+                        gridTemplateRows: "1fr 1fr 1fr",
+                    }}
+                >
                     {textContent.map((text, index) => (
                         <div
                             key={index}
@@ -78,7 +83,10 @@ export const Content = () => {
                                 transition: "background-color 2s ease",
                             }}
                         >
-                            <Text size="$lg">{text}</Text>
+                            <Text size="$lg" className="text-content">
+                                {text}
+                            </Text>{" "}
+                            {/* Add class to text content */}
                             <Spacer y={1} />
                             <Text size="$lg" className="right-col word">
                                 {words[index]}

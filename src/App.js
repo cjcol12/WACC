@@ -15,6 +15,7 @@ import { VariantsSelectorWrapper } from "./VariantsSelectorWrapper.js";
 import { Card1 } from "./components/Card1.js";
 import { Grid } from "@nextui-org/react";
 import "./style/App.css";
+import TimeCard from "./components/CO2Released.js";
 
 export default function App() {
     const [variant, setVariant] = React.useState("default");
@@ -46,32 +47,19 @@ export default function App() {
                 <Navbar.Content
                     activeColor={activeColor}
                     hideIn="xs"
-                    variant={variant}
+                    variant="underline-rounded"
                 >
-                    <Navbar.Link href="#">Home</Navbar.Link>
                     <Navbar.Link isActive href="#">
-                        Learn More
+                        Home
                     </Navbar.Link>
+                    <Navbar.Link href="#">Learn More</Navbar.Link>
                     <Navbar.Link href="#">
                         What are the Alternatives
                     </Navbar.Link>
                     <Navbar.Link href="#">Contact us</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Content>
-                    <Navbar.Link color="inherit" href="#">
-                        Login
-                    </Navbar.Link>
-                    <Navbar.Item>
-                        <Button
-                            auto
-                            flat
-                            as={Link}
-                            color={activeColor}
-                            href="#"
-                        >
-                            Sign Up
-                        </Button>
-                    </Navbar.Item>
+                    <TimeCard />
                 </Navbar.Content>
             </Navbar>
             <Layout></Layout>

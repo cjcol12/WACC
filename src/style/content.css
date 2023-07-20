@@ -37,7 +37,8 @@
 
 #bg-black {
     background-color: black;
-    transition: background-color 3s ease-in; /* Add this line */
+
+    transition: background-color 3s ease-in;
 }
 
 .word {
@@ -55,4 +56,13 @@
     transform: none;
     opacity: 1;
     transition: all 2s ease;
+}
+
+.text-content {
+    opacity: 0;
+}
+
+.animate-text {
+    opacity: 1;
+    transition: opacity 2s ease;
 }

@@ -27,10 +27,24 @@ h1 {
         padding: 0.5rem;
         font-size: 4rem;
     }
+
+    .card_caption2 {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 0.5rem;
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 1200px) {
     .card_caption {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 0.2rem;
+        font-size: 2rem;
+    }
+
+    .card_caption2 {
         background-color: rgba(0, 0, 0, 0.7);
         border-radius: 5px;
         padding: 0.2rem;

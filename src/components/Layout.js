@@ -5,8 +5,8 @@ import "../style/layout.css";
 import BlankPage from "./BlankRed.js";
 
 export const Layout = ({ children }) => {
-    const color1 = "blue";
-    const color2 = "green";
+    const color1 = "#b0140e";
+    const color2 = "black";
     const color3 = "black"; // Define another color for the last page overlay
     return (
         <Box>

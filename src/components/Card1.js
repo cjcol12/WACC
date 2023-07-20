@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Text } from "@nextui-org/react";
+import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import styled from "styled-components";
 import cardImage from "../images/1_tonne.png";
 import "../style/styles.css";
@@ -31,5 +31,32 @@ export const Card1 = () => (
             height="100%"
             alt="1 Tonne CO2 ballon compared to bus"
         />
+        <Card.Footer
+            isBlurred
+            css={{
+                position: "absolute",
+                bgBlur: "#ffffff66",
+                borderTop:
+                    "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                bottom: 0,
+                zIndex: 1,
+            }}
+        >
+            <Row>
+                <Col></Col>
+                <Col>
+                    <Row justify="flex-end">
+                        <Text
+                            css={{ color: "inherit" }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                        >
+                            Time is running out.
+                        </Text>
+                    </Row>
+                </Col>
+            </Row>
+        </Card.Footer>
     </Card>
 );

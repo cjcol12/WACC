@@ -33,7 +33,8 @@ const TimeCard = () => {
         // <Card>
         <div className="card-body">
             <p className="card-text">
-                {emissionsThisYear.toFixed(0)} Tons of CO2 emitted this year
+                <strong>{emissionsThisYear.toFixed(0)}</strong> Tons of CO2
+                emitted this year
             </p>
         </div>
         /* </Card> */
